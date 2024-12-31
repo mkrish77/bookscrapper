@@ -1,0 +1,31 @@
+CREATE DATABASE google_books;
+USE google_books;
+CREATE TABLE books (
+    book_id VARCHAR(255) PRIMARY KEY, -- Unique identifier for each book
+    search_key VARCHAR(255),          -- Search term used in the API
+    book_title VARCHAR(255),          -- Title of the book
+    book_subtitle TEXT,               -- Subtitle of the book
+    book_authors TEXT,                -- Authors (comma-separated)
+    book_description TEXT,            -- Brief description of the book
+    industryIdentifiers TEXT,         -- Identifiers like ISBN (comma-separated)
+    text_readingModes BOOLEAN,        -- Text reading mode availability
+    image_readingModes BOOLEAN,       -- Image reading mode availability
+    pageCount INT,                    -- Number of pages
+    categories TEXT,                  -- Genres/categories (comma-separated)
+    language VARCHAR(10),             -- Language code
+    imageLinks TEXT,                  -- URLs to cover images (comma-separated)
+    ratingsCount INT,                 -- Total user ratings
+    averageRating DECIMAL(3,2),       -- Average rating
+    country VARCHAR(10),              -- Country code
+    saleability VARCHAR(50),          -- Sale status
+    isEbook BOOLEAN,                  -- eBook availability
+    amount_listPrice DECIMAL(10,2),   -- List price
+    currencyCode_listPrice VARCHAR(10), -- Currency code for list price
+    amount_retailPrice DECIMAL(10,2), -- Retail price
+    currencyCode_retailPrice VARCHAR(10), -- Currency code for retail price
+    buyLink TEXT,                     -- URL to purchase the book
+    year VARCHAR(4)                   -- Year of publication
+);
+
+
+
